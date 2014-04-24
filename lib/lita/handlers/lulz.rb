@@ -13,7 +13,7 @@ module Lita
         doc = Nokogiri::HTML(open(BASE_URL))
         images = doc.xpath("//a").to_a[5..-1]
 
-        response.reply url + "/" + images.sample
+        response.reply BASE_URL + "/" + images.sample
       end
 
       def bomb(response)
@@ -21,7 +21,7 @@ module Lita
         images = doc.xpath("//a").to_a[5..-1]
 
         images.each do |image|
-          response.reply url + "/" + image
+          response.reply BASE_URL + "/" + image
         end
       end
     end
