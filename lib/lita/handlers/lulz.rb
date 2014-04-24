@@ -4,8 +4,8 @@ require 'nokogiri'
 module Lita
   module Handlers
     class Lulz < Handler
-      route(/\blulz\b/i, lulz, command: false, help: { "lulz" => "Display a single image" })
-      route(/\blulzbomb( (\d+))?/i, lulzbomb, command: false, help: { "lulzbomb" => "Display 6 images" })
+      route(/\blulz\b/i, :lulz, command: false, help: { "lulz" => "Display a single image" })
+      route(/\blulzbomb( (\d+))?/i, :lulzbomb, command: false, help: { "lulzbomb" => "Display 6 images" })
 
       BASE_URL = "http://bukk.it"
 
