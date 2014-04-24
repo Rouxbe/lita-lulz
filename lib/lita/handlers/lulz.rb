@@ -25,6 +25,6 @@ module Lita
         end
       end
     end
-    Lita.register_handler(Lulzbomb)
+    Lita.register_handler(Lulz)
   end
 end
